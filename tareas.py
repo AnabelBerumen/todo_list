@@ -1,14 +1,14 @@
 from logger_base import log
 
 class Tarea:
-    def __init__(self, id_tarea=None, tarea=None, estado=None):
+    def __init__(self, id_tarea=None, tarea=None, estado='pendiente'):
         self._id_tarea = id_tarea
         self._tarea = tarea
         self._estado = estado
 
     def __str__(self):
         return f'''
-            Id Tarea: {self._id_tarea}, Tarea: {self._tarea},
+            Id Tarea: {self._id_tarea}, Tarea: {self._tarea}.
             Estado: {self._estado}.
         '''
 

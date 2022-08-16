@@ -60,8 +60,9 @@ if __name__ == '__main__':
     tarea1 = Tarea(id_tarea=7)
     tareas_eliminadas = TareasDAO.delete(tarea1)
     log.debug(f'Tarea eliminada {tareas_eliminadas}')
-    """
+    
 
     tareas = TareasDAO().read()
     for tarea in tareas:
         log.debug(tarea)
+"""

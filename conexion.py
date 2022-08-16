@@ -11,7 +11,8 @@ class Conexion:
     def obtenerConexion(cls):
         if cls.conexion is None:
             try:
-                cls.conexion = psycopg2.connect(database="todo_db", user="postgres", password="admin", host="127.0.0.1", port="5432")
+                cls.conexion = psycopg2.connect(database="todo_db", user="postgres", password="admin", host="127.0.0.1",
+                                                port="5432")
                 log.debug(f'Conexion exitosa: {cls.conexion}')
                 return cls.conexion
             except Exception as e:
@@ -19,7 +20,6 @@ class Conexion:
                 sys.exit()
         else:
             return cls.conexion
-
 
     @classmethod
     def obtenerCursor(cls):
@@ -33,6 +33,7 @@ class Conexion:
                 sys.exit()
         else:
             return cls.cursor
+
 
 if __name__ == '__main__':
     Conexion.obtenerConexion()
